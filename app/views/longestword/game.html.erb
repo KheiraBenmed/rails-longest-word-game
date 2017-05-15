@@ -1,0 +1,11 @@
+<h1>Des chiffres et des lettre le jeu</h1>
+<p>Welcome to the longest word-game !</p>
+<h2>The grid <%= @grid_array %></h2>
+
+<form action="/longestword/score">
+  <label for="attempt">Write your guess</label>
+  <input type="text" id="attempt" name="attempt" placeholder="what is your guess?">
+  <input name="grid" value="<%= @grid_array.join("") %>" type="hidden">
+  <input name="start_time" value="<%= @start_time %>" type="hidden">
+  <input type="submit" value="Go on!">
+</form>
